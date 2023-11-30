@@ -5,7 +5,7 @@ func _ready():
 
 func _input(_event):
 	if Input.is_action_just_pressed("Menu"):
-		var menu = get_node_or_null("/root/Game/UI/Pause")
+		var menu = get_node_or_null("/root/Level1/UI/Pause")
 		if menu == null:
 			get_tree().quit()
 		else:
@@ -15,3 +15,4 @@ func _input(_event):
 			else:
 				get_tree().paused = true
 				menu.show()
+				

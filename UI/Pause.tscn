@@ -39,7 +39,7 @@ theme_override_constants/shadow_offset_y = 2
 theme_override_constants/shadow_outline_size = 12
 theme_override_fonts/font = ExtResource("4_p5xjk")
 theme_override_font_sizes/font_size = 90
-text = "Inside Out
+text = "Pause
 "
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -59,7 +59,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("4_p5xjk")
 theme_override_font_sizes/font_size = 35
-text = "Play
+text = "Continue
 "
 
 [node name="Quit" type="Button" parent="."]
