@@ -5,14 +5,15 @@ func _ready():
 
 func _input(_event):
 	if Input.is_action_just_pressed("Menu"):
-		var menu = get_node_or_null("/root/Level1/UI/Pause")
-		if menu == null:
+		var ro = get_node("/root")
+		var pause_menu = ro.get_child(ro.get_child_count()-1).get_node("UI/Pause")
+		if pause_menu == null:
 			get_tree().quit()
 		else:
-			if menu.visible:
+			if pause_menu.visible:
 				get_tree().paused = false
-				menu.hide()
+				pause_menu.hide()
 			else:
 				get_tree().paused = true
-				menu.show()
+				pause_menu.show()
 				
