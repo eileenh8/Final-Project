@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bt6rmikoeckx8"]
+[gd_scene load_steps=7 format=3 uid="uid://bt6rmikoeckx8"]
 
 [ext_resource type="Script" path="res://Players/Player2.gd" id="1_3o8jp"]
 [ext_resource type="Texture2D" uid="uid://c7scerfyfp0ty" path="res://Assets/Level_2Assets/Player_2_Tiles/tile_0046.png" id="1_xhqya"]
 [ext_resource type="Texture2D" uid="uid://dsv27hmjq38ir" path="res://Assets/Level_2Assets/Player_2_Tiles/tile_0045.png" id="2_pps6h"]
+[ext_resource type="AudioStream" uid="uid://d3c7jtf4424bs" path="res://Assets/Level_1_Assets/level1_music.wav" id="4_dr53q"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yjsb6"]
 animations = [{
@@ -67,3 +68,7 @@ shape = SubResource("RectangleShape2D_rvd5g")
 
 [node name="Camera2D" type="Camera2D" parent="Player2"]
 zoom = Vector2(2, 2)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Player2/Camera2D"]
+stream = ExtResource("4_dr53q")
+autoplay = true
