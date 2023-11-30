@@ -1,0 +1,84 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmfiddfkp3hgn"]
+
+[ext_resource type="Theme" uid="uid://b3kg1sppafl2b" path="res://UI/UI.tres" id="1_ajj6x"]
+[ext_resource type="Script" path="res://UI/Pause.gd" id="2_n8mpy"]
+[ext_resource type="Texture2D" uid="uid://cmy4nw6esx8x0" path="res://Assets/UI_Assets/Background Grid White.jpeg" id="3_uxf6n"]
+[ext_resource type="FontFile" uid="uid://ejhlc2ittu10" path="res://Assets/UI_Assets/Kenney Pixel.ttf" id="4_p5xjk"]
+
+[node name="Pause" type="Control"]
+process_mode = 3
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_ajj6x")
+script = ExtResource("2_n8mpy")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(574, 405)
+rotation = 1.5708
+scale = Vector2(1.46422, 1.69249)
+texture = ExtResource("3_uxf6n")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -248.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_ajj6x")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.403922, 0.737255, 0.227451, 1)
+theme_override_constants/shadow_offset_x = -3
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_outline_size = 12
+theme_override_fonts/font = ExtResource("4_p5xjk")
+theme_override_font_sizes/font_size = 90
+text = "Inside Out
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Play" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -20.0
+offset_right = 100.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_p5xjk")
+theme_override_font_sizes/font_size = 35
+text = "Play
+"
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = 40.0
+offset_right = 100.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_p5xjk")
+theme_override_font_sizes/font_size = 35
+text = "Quit
+"
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
