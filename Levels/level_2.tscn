@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://d1lkcr8yp7di0"]
+[gd_scene load_steps=18 format=3 uid="uid://d1lkcr8yp7di0"]
 
 [ext_resource type="PackedScene" uid="uid://bt6rmikoeckx8" path="res://Players/player_2.tscn" id="1_0p7eu"]
 [ext_resource type="Texture2D" uid="uid://wnfhrgjyd8yp" path="res://Assets/Level_2Assets/Tilemap/tilemap_packed.png" id="1_dl2k7"]
+[ext_resource type="Script" path="res://Levels/Coins.gd" id="2_je5tl"]
 [ext_resource type="Script" path="res://Levels/Platform_container.gd" id="3_8htas"]
 [ext_resource type="PackedScene" uid="uid://co57c1021hr1t" path="res://UI/ui.tscn" id="4_4ig5u"]
 
@@ -595,6 +596,7 @@ layer_0/tile_data = PackedInt32Array(2490368, 0, 0, 2490369, 0, 0, 2490370, 0, 0
 tile_set = SubResource("TileSet_bfopc")
 format = 2
 layer_0/tile_data = PackedInt32Array(2686993, 196608, 5, 2359332, 196608, 5, 1835078, 196608, 5, 1769554, 196608, 5, 2687052, 196608, 5)
+script = ExtResource("2_je5tl")
 
 [node name="Foreground" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_ggtwy")
