@@ -12,7 +12,7 @@ Proceed through the game by overcoming the disappearing platforms, and by collec
 
 
 ## Impediments
-There were some glitches with merging changes, and some issues with getting certain features to work across all levels such as the pause menu. 
+There were some glitches with merging changes, and some issues with getting certain features to work across all levels such as the pause menu. For unpausing, pressing the Escape key works though!
 
 ## Implementation
 1-Bit Platformer Pack (1.1) Created/distributed by Kenney (www.kenney.nl)
