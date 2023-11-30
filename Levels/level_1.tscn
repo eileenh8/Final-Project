@@ -1,8 +1,10 @@
-[gd_scene load_steps=19 format=3 uid="uid://crvqaorp2w47e"]
+[gd_scene load_steps=21 format=3 uid="uid://crvqaorp2w47e"]
 
 [ext_resource type="PackedScene" uid="uid://ctgdqlhrcc4lj" path="res://Players/player_1.tscn" id="1_phyc5"]
 [ext_resource type="Texture2D" uid="uid://c7gnk2grf1p27" path="res://Assets/Level_1_Assets/Tilemap/monochrome_tilemap_packed.png" id="1_vu2pg"]
 [ext_resource type="Texture2D" uid="uid://cfif1p728i7ia" path="res://Assets/Level_1_Assets/Tilemap/monochrome_tilemap_transparent_packed.png" id="2_xdp5s"]
+[ext_resource type="Script" path="res://Levels/Exit.gd" id="3_5tlh8"]
+[ext_resource type="Texture2D" uid="uid://ds6oa74enaauq" path="res://Assets/Level_1_Assets/Tiles/Transparent/tile_0051.png" id="3_rm7sk"]
 [ext_resource type="Script" path="res://Levels/Platform_container.gd" id="4_26jm5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_urpvp"]
@@ -2852,6 +2854,19 @@ tile_set = SubResource("TileSet_8i7ly")
 format = 2
 layer_0/tile_data = PackedInt32Array(1900620, 131072, 2, 1900621, 131072, 2, 1900622, 131072, 2, 1900623, 131072, 2, 1900624, 131072, 2, 1900625, 131072, 2, 1900626, 131072, 2, 1900627, 131072, 2, 1900628, 131072, 2, 1966163, 131072, 2, 1966162, 131072, 2, 1966161, 131072, 2, 1966160, 131072, 2, 1966159, 131072, 2, 1966158, 131072, 2, 1966157, 131072, 2, 2031696, 131072, 2, 2031697, 131072, 2, 2031698, 131072, 2, 2097275, 131072, 2, 2097276, 131072, 2, 2097277, 131072, 2, 2097278, 131072, 2, 2097279, 131072, 2, 2097280, 131072, 2, 2097281, 131072, 2, 2097282, 131072, 2, 2031746, 131072, 2, 2031745, 131072, 2, 2031744, 131072, 2, 2031743, 131072, 2, 2031742, 131072, 2, 1769636, 131072, 2, 1769635, 131072, 2, 1769634, 131072, 2, 1769633, 131072, 2, 1704097, 131072, 2, 1704096, 131072, 2, 1769632, 131072, 2)
 
+[node name="Exit" type="Area2D" parent="."]
+position = Vector2(3954, 593)
+script = ExtResource("3_5tlh8")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Exit"]
+scale = Vector2(1.5625, 2.75)
+texture = ExtResource("3_rm7sk")
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Exit"]
+scale = Vector2(1.5625, 2.75)
+polygon = PackedVector2Array(8, 8, -8, 8, -8, -8, 8, -8)
+
 [node name="Player1" parent="." instance=ExtResource("1_phyc5")]
 position = Vector2(50, 600)
 
@@ -2899,4 +2914,5 @@ tile_set = SubResource("TileSet_2yh4a")
 format = 2
 layer_0/tile_data = PackedInt32Array(2294003, 131073, 9, 2359539, 131073, 10, 2425075, 131073, 11, 2490362, 262145, 10, 2424845, 393217, 10, 2359309, 393217, 9, 2424826, 393217, 9, 2425079, 458753, 5, 2359543, 458753, 5, 2425078, 983041, 18, 2359542, 983041, 18, 2294006, 458753, 5, 2359541, 458753, 5, 2425077, 458753, 5, 2294005, 983041, 18, 2490357, 196609, 11, 2490356, 196609, 11, 2490358, 196609, 11, 2490359, 196609, 11, 2490360, 262145, 11, 2490363, 1179649, 1, 2424840, 1179649, 1, 2359318, 1179649, 1, 2359332, 1179649, 1, 2424877, 1179649, 1, 2883636, 1179649, 1, 2424895, 1179649, 1, 2293833, 1179649, 1, 2424914, 1179649, 1, 2424932, 1179649, 1, 1704054, 1179649, 1, 2556009, 1179649, 1, 2228344, 1179649, 1, 2490484, 1179649, 1, 2424948, 1179649, 1, 2097286, 1179649, 1, 2228363, 1179649, 1, 2556055, 1179649, 1, 1966248, 1179649, 1, 1376425, 1179649, 1, 1179833, 1179649, 1, 1966264, 1179649, 1, 2425024, 1179649, 1, 2425042, 1179649, 1, 2425060, 1179649, 1, 2425072, 1179649, 1)
 
+[connection signal="body_entered" from="Exit" to="Exit" method="_on_body_entered"]
 [connection signal="timeout" from="Platform_container/Timer" to="Platform_container" method="_on_timer_timeout"]
