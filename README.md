@@ -27,4 +27,4 @@ None
 None
 
 # Created by: Pesto
-Eileen Henriquez, Luca Arana, Thomas Nicholson, AJ Lambert
+Eileen Henriquez, Luca Arana, Thomas Lee Nicholson Jr., AJ Lambert
