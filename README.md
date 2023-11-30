@@ -6,12 +6,10 @@ We interpreted the theme through our visuals. The player begins the game in a bl
 
 ## Game Play
 Control player with A, D, and space bar to jump.
-<<<<<<< HEAD
 
-Proceed through the game by overcoming the disappearing platforms.
-=======
+
 Proceed through the game by overcoming the disappearing platforms, and by collecting.
->>>>>>> f45a79a298f09a0b837fe1d27a194d0b028e12ea
+
 
 ## Impediments
 There were some glitches with merging changes, and some issues with getting certain features to work across all levels such as the pause menu. 
