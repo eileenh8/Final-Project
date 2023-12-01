@@ -78,6 +78,8 @@ stream = ExtResource("4_dr53q")
 autoplay = true
 
 [node name="Coin_Collector" type="Area2D" parent="Player2"]
+collision_layer = 8
+collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player2/Coin_Collector"]
 position = Vector2(-1, 1)
